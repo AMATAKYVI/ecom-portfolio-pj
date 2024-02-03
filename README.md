@@ -1,9 +1,9 @@
 ## Demo App
-# -- Demonstrate the basic ecommerce app under the hood
+# Demonstrate the basic ecommerce app under the hood
 
 -- Expected to complete in June 2024
 
-# -- Tech Stack:
+# Tech Stack:
       -- NextJS
       -- NextAuth (for authentication)
       -- MongoDB (Mongoose)
