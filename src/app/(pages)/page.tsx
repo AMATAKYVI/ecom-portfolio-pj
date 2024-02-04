@@ -1,4 +1,4 @@
-import Homepage from '@/components/Homepage';
+import Homepage from '@/components/HomePage/Homepage';
 import Product from '@/components/Product';
 import Image from 'next/image';
 

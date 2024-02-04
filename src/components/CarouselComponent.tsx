@@ -1,36 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
+import { FunctionComponent, useState } from 'react';
 import { Carousel } from 'antd';
-import { FunctionComponent } from 'react';
+interface CarouselComponentProps {
+  images: string[];
+}
 
-interface CarouselComponentProps {}
-
-const CarouselComponent: FunctionComponent<CarouselComponentProps> = () => {
+const CarouselComponent: FunctionComponent<CarouselComponentProps> = ({
+  images,
+}) => {
   return (
-    <div className="carousel-container h-[70vh]">
-      <Carousel autoplay adaptiveHeight>
-        <div>
-          <img
-            className="object-cover w-full h-full"
-            src="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
-            alt="Image 1"
-          />
-        </div>
-        <div>
-          <img
-            className="object-cover w-full h-full"
-            src="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
-            alt="Image 2"
-          />
-        </div>
-        <div>
-          <img
-            className="object-cover w-full h-full"
-            src="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
-            alt="Image 3"
-          />
-        </div>
-      </Carousel>
-    </div>
+    // autoPlay
+    <Carousel>
+      <div className="h-64 flex justify-center items-center bg-blue-700">
+        <h3 className="text-white text-4xl">1</h3>
+      </div>
+      <div className="h-64 flex justify-center items-center bg-blue-700">
+        <img
+          src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.webp?b=1&s=170667a&w=0&k=20&c=GXD8Ci32Wa8c8Zc49domJFzqpCTaHgxe96_qfM7ml8w="
+          alt=""
+          className="w-full h-full  object-cover object-center"
+        />
+      </div>
+      <div className="h-64 flex justify-center items-center bg-blue-700">
+        <h3 className="text-white text-4xl">3</h3>
+      </div>
+      <div className="h-64 flex justify-center items-center bg-blue-700">
+        <h3 className="text-white text-4xl">4</h3>
+      </div>
+    </Carousel>
   );
 };
 

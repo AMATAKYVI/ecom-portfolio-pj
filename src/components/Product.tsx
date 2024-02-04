@@ -26,7 +26,6 @@ const Product: FunctionComponent<ProductProps> = () => {
     }
     fetchProduct();
   }, []);
-  // console.log(data?.name);
   return (
     <div className="">
       <div className="flex flex-wrap justify-center gap-2">
