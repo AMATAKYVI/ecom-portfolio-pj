@@ -1,7 +1,7 @@
 'use client';
 import axios from 'axios';
 import { FunctionComponent, useEffect, useState } from 'react';
-import Card from './Card';
+import Card from './CardComponent';
 import { signOut } from 'next-auth/react';
 interface ProductType {
   _id: string;
@@ -9,7 +9,7 @@ interface ProductType {
   description: string;
   price: number;
   stockQuantity: number;
-  category: Array<string>;
+  categories: Array<string>;
 }
 interface ProductProps {}
 
