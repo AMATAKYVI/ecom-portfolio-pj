@@ -51,15 +51,20 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
       )}
       {!isMobile && (
         <Menu theme="light" mode="horizontal">
+          {' '}
           <div className="w-full flex align-center justify-between mx-10">
             <div>
               {/* logo */}
-              <Menu.Item>Home</Menu.Item>
+              {/* <Menu.Item>Home</Menu.Item> */}
+              <div>Item 1</div>
             </div>
             <div className="flex gap-10">
-              <Menu.Item>Item two</Menu.Item>
-              <Menu.Item>Item three</Menu.Item>
-              <Menu.Item>Item three</Menu.Item>
+              <div>Item 2</div>
+              <div>Item 3</div>
+              <div>Item 4</div>
+              {/* <Menu.Item className="">Item two</Menu.Item>
+                <Menu.Item>Item three</Menu.Item>
+                <Menu.Item>Item three</Menu.Item> */}
             </div>
           </div>
         </Menu>
