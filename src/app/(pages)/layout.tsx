@@ -10,12 +10,10 @@ export default function RootLayout({
   const { data: session } = useSession();
   console.log(session);
   return (
-    <html lang="en">
-      <body className="">
-        {/* depend on the auth state navbar will change */}
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <>
+      {/* depend on the auth state navbar will change */}
+      <Navbar />
+      {children}
+    </>
   );
 }

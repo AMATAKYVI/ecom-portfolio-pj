@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 'use client';
 import { FunctionComponent } from 'react';
 import { Card, Typography, Tag } from 'antd';

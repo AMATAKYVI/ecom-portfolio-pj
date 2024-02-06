@@ -1,33 +1,55 @@
 'use client';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import Product from '../Product';
 import CarouselComponent from '../CarouselComponent';
-import { useMediaQuery } from 'react-responsive';
+import { Spin } from 'antd';
 
 interface HomepageProps {}
 
 /**
- * Home page where the user can the many products available
- * need to sign in to sign up inorder to purchase the product
+ * Home page where the user can see the many products available
+ * need to sign in to sign up in order to purchase the product
  * @returns
  */
 const Homepage: FunctionComponent<HomepageProps> = () => {
-  const isDesktopOrLaptop = useMediaQuery({ minWidth: 768 });
+  const [isDesktopOrLaptop, setIsDesktopOrLaptop] = useState(false);
+  const [loading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktopOrLaptop(window.innerWidth >= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="">
       {/* display fixed banner instead if the screen larger than 768px or else display nothing */}
-      {isDesktopOrLaptop ? (
-        //banner component go here
-        <h1>i</h1>
-      ) : (
+      {isDesktopOrLaptop && <div></div>}
+      {!isDesktopOrLaptop && (
         <div className="md:ml-[150px] md:mr-[150px]">
-          <CarouselComponent
-            images={[
-              'https://via.placeholder.com/300x300',
-              'https://via.placeholder.com/300x300',
-              'https://via.placeholder.com/300x300',
-            ]}
-          />
+          <Spin spinning={loading}>
+            <CarouselComponent
+              images={[
+                'https://via.placeholder.com/300x300',
+                'https://via.placeholder.com/300x300',
+                'https://via.placeholder.com/300x300',
+              ]}
+            />
+          </Spin>
         </div>
       )}
       <Product />
