@@ -14,7 +14,7 @@ interface ProductType {
 interface ProductProps {}
 
 const Product: FunctionComponent<ProductProps> = () => {
-  const [data, setData] = useState<ProductType[]>();
+  const [data, setData] = useState<ProductType[]>([]);
   useEffect(() => {
     async function fetchProduct() {
       try {
