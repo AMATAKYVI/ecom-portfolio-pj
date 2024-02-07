@@ -38,14 +38,44 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
   }, []); // Empty dependency array ensures the effect runs only once on component mount
   const items: MenuProps['items'] = [
     {
-      label: <a></a>,
-      key: 'home',
+      label: (
+        <p className=" text-center text-black px-5 rounded-sm py-1">
+          some test
+        </p>
+      ),
+      key: 'Home',
+    },
+    {
+      label: (
+        <p className=" text-center text-black  px-5 rounded-sm py-1">
+          some test
+        </p>
+      ),
+      key: 'Cart',
+    },
+    {
+      label: (
+        <p className=" text-center text-black  px-5 rounded-sm py-1">
+          some test
+        </p>
+      ),
+      key: 'FAQs',
+    },
+    {
+      label: (
+        <p className=" text-center text-white px-5 rounded-sm py-1 ">Login</p>
+      ),
+      key: 'Login',
     },
   ];
   return (
     <>
       {isMobile && (
-        <Dropdown menu={{ items }} placement="bottomRight">
+        <Dropdown
+          menu={{ items }}
+          placement="bottomRight"
+          overlayStyle={{ width: '100%' }}
+        >
           <Button type="text" icon={<MenuOutlined />} />
         </Dropdown>
       )}
