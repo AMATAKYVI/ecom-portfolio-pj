@@ -7,7 +7,7 @@ Expected to complete by June 2024
       -- NextJS
       -- NextAuth (for authentication)
       -- MongoDB (Mongoose)
-      -- Antd (Design)
-      -- API some api handling on the server
+      -- Antd + Tailwind (Design)
+      -- API
       -- etc...
       
