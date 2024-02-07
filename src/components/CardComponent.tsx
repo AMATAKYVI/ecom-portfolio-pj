@@ -1,5 +1,5 @@
 'use client';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import { Card, Typography, Tag } from 'antd';
 
 const { Meta } = Card;

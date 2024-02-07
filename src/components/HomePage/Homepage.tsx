@@ -3,6 +3,8 @@ import { FunctionComponent, useEffect, useState } from 'react';
 import Product from '../Product';
 import CarouselComponent from '../CarouselComponent';
 import { Spin } from 'antd';
+import CarouselTest from '../CarouselTest';
+import CarouselTesting from '../CarouselTest';
 
 interface HomepageProps {}
 
@@ -12,46 +14,53 @@ interface HomepageProps {}
  * @returns
  */
 const Homepage: FunctionComponent<HomepageProps> = () => {
-  const [isDesktopOrLaptop, setIsDesktopOrLaptop] = useState(false);
-  const [loading, setIsLoading] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktopOrLaptop(window.innerWidth >= 768);
-    };
+  // const [isDesktopOrLaptop, setIsDesktopOrLaptop] = useState(false);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsDesktopOrLaptop(window.innerWidth >= 768);
+  //   };
 
-    handleResize();
+  //   handleResize();
 
-    window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
+  // const [reloading, setIsReloading] = useState(false);
+  // useEffect(() => {
+  //   const isReloading =
+  //     window.performance.navigation.type ===
+  //     window.performance.navigation.TYPE_RELOAD;
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  //   if (isReloading) {
+  //     setIsReloading(true);
+  //   } else {
+  //     setIsReloading(false);
+  //   }
+  // }, []);
   return (
     <div className="">
       {/* display fixed banner instead if the screen larger than 768px or else display nothing */}
-      {isDesktopOrLaptop && <div></div>}
-      {!isDesktopOrLaptop && (
-        <div className="md:ml-[150px] md:mr-[150px]">
-          <Spin spinning={loading}>
-            <CarouselComponent
-              images={[
-                'https://via.placeholder.com/300x300',
-                'https://via.placeholder.com/300x300',
-                'https://via.placeholder.com/300x300',
-              ]}
-            />
-          </Spin>
-        </div>
-      )}
+
+      <div className="md:ml-[150px] md:mr-[150px]">
+        {/* <CarouselTesting
+          images={[
+            'https://via.placeholder.com/300x300',
+            'https://via.placeholder.com/300x300',
+            'https://via.placeholder.com/300x300',
+          ]}
+        /> */}
+        <CarouselComponent
+          images={[
+            'https://via.placeholder.com/300x300',
+            'https://via.placeholder.com/300x300',
+            'https://via.placeholder.com/300x300',
+          ]}
+        />
+      </div>
+
       <Product />
     </div>
   );

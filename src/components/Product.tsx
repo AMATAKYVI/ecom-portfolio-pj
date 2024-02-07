@@ -20,6 +20,7 @@ const Product: FunctionComponent<ProductProps> = () => {
       try {
         const { data } = await axios.get('/api/products');
         setData(data);
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
