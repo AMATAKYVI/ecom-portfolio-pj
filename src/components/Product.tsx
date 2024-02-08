@@ -19,22 +19,21 @@ const Product: FunctionComponent<ProductProps> = () => {
     async function fetchProduct() {
       try {
         const { data } = await axios.get('/api/products');
-        setData(data);
-        console.log(data);
+        setData(data?.data);
+        console.log(data.data);
       } catch (error) {
         console.log(error);
       }
     }
     fetchProduct();
-  }, [data]);
+  }, []);
   return (
     <div className="">
       <div className="flex flex-wrap justify-center gap-2">
-        some product here
-        {/* {data &&
+        {data &&
           data?.map((item: ProductType) => {
             return <Card item={item} key={item._id} />;
-          })} */}
+          })}
       </div>
     </div>
   );

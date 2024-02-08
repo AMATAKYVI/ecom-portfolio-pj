@@ -6,7 +6,7 @@ connectDB();
 export async function GET(request: NextRequest) {
   try {
     const products = await Product.find({});
-    return NextResponse.json(products);
+    return NextResponse.json({ data: products });
   } catch (error) {
     return NextResponse.json({ message: 'error' });
   }
