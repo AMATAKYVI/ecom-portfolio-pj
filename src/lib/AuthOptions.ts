@@ -20,13 +20,7 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async session({ session, user }: { session: any; user: any }) {
-      // session.user.id = user.id;
       return session;
     },
   },
-  //   pages: {
-  //     signIn: '/auth/signin',
-  //     signOut: '/auth/signout',
-  //     error: '/auth/error',
-  //   },
 };

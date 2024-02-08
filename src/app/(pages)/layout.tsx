@@ -8,7 +8,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const { data: session } = useSession();
-  console.log(session);
   return (
     <>
       {/* depend on the auth state navbar will change */}

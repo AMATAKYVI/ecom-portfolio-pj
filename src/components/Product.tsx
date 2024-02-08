@@ -26,13 +26,14 @@ const Product: FunctionComponent<ProductProps> = () => {
       }
     }
     fetchProduct();
-  }, []);
+  }, [data]);
   return (
     <div className="">
       <div className="flex flex-wrap justify-center gap-2">
-        {data?.map((item: ProductType) => {
-          return <Card item={item} key={item._id} />;
-        })}
+        {data &&
+          data?.map((item: ProductType) => {
+            return <Card item={item} key={item._id} />;
+          })}
       </div>
     </div>
   );
