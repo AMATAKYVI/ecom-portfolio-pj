@@ -59,16 +59,19 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
   return (
     <>
       {isMobile && (
-        <div className="flex justify-between align-center mx-4">
+        <div className="flex justify-between align-center sticky top-0 text-white z-10 py-2 border-b mb-2 bg-blue-700 rounded-b-sm font-semibold">
           <Dropdown
             menu={{ items }}
             placement="bottomRight"
             overlayStyle={{ width: '50%' }}
           >
-            <Button type="text" icon={<MenuOutlined />} />
+            <Button
+              type="text"
+              icon={<MenuOutlined className=" text-white" />}
+            />
           </Dropdown>
-          <div className=" mx-4 px-2 my-auto rounded-full hover:bg-gray-100 transition-all duration-100 relative">
-            <ShoppingCart className="w-4" />
+          <div className=" mx-4 px-2 my-auto rounded-full hover:bg-gray-100 transition-all duration-100 relative font-semibold">
+            <ShoppingCart className="w-5" />
             <div className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
               1
             </div>
@@ -76,7 +79,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
         </div>
       )}
       {!isMobile && (
-        <div className="px-5 text-sm py-2 mx-10 flex border-b mb-2 sticky top-0 z-10 bg-white shadow-sm  border-l  border-r rounded-sm">
+        <div className="px-5 text-sm py-2  flex border-b mb-2 sticky top-0 z-10 bg-blue-700 shadow-sm text-white font-semibold  rounded-b-sm">
           <div className="w-full flex align-center justify-between mx-5">
             <div className="flex items-center cursor-pointer hover:bg-gray-100 rounded-lg shadow-md">
               <Image
@@ -98,9 +101,9 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                 {/* <HelpCircle className="w-4 h-4" /> */}
               </div>
               <div className="relative">
-                <div className=" px-2 my-auto rounded-full hover:bg-gray-100 transition-all duration-100">
-                  <ShoppingCart className="w-4 h-4" />
-                  <div className="absolute right-0 top-[-5px] py-1 px-2 right-3 w-3 h-3 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
+                <div className=" px-2 my-auto rounded-full cursor-pointer transition-all duration-100">
+                  <ShoppingCart className="w-5 h-5" />
+                  <div className="absolute  top-[-5px] py-1 px-2 right-3 w-3 h-3 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
                     1
                   </div>
                 </div>

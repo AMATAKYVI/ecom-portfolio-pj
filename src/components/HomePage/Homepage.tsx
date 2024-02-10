@@ -2,9 +2,7 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import Product from '../Product';
 import CarouselComponent from '../CarouselComponent';
-import { Spin } from 'antd';
-import CarouselTest from '../CarouselTest';
-import CarouselTesting from '../CarouselTest';
+import HomeAdsLanding from '../HomeAdsLanding';
 
 interface HomepageProps {}
 
@@ -15,8 +13,8 @@ interface HomepageProps {}
  */
 const Homepage: FunctionComponent<HomepageProps> = () => {
   return (
-    <div className="">
-      <div className="md:ml-[150px] md:mr-[150px]">
+    <div className="md:mx-[60px] lg:mx-[100px] xl:mx-[150px] border-l border-r border-gray-100">
+      <div className="">
         <CarouselComponent
           images={[
             'https://via.placeholder.com/300x300',
@@ -25,7 +23,7 @@ const Homepage: FunctionComponent<HomepageProps> = () => {
           ]}
         />
       </div>
-
+      <HomeAdsLanding />
       <Product />
     </div>
   );

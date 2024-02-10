@@ -38,7 +38,55 @@ const CarouselComponent: FunctionComponent<CarouselComponentProps> = ({
 
   return (
     <>
-      {isDesktopOrLaptop && <></>}
+      {isDesktopOrLaptop && (
+        <>
+          <div className="relative">
+            <Swiper
+              slidesPerView={'auto'}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              keyboard={{ enabled: true }}
+              modules={[Autoplay, Keyboard, Navigation, Scrollbar, A11y]}
+              autoplay={{
+                delay: 2500,
+              }}
+              className="mySwiper rounded-md h-[350px] w-[100%] mx-auto mb-5 xl:w-[70%]   "
+            >
+              <SwiperSlide className="">
+                <Image
+                  src="https://via.placeholder.com/300x300"
+                  width={300}
+                  height={300}
+                  alt="Some Image"
+                  className="w-full h-full object-cover object-center"
+                ></Image>
+              </SwiperSlide>
+              <SwiperSlide>
+                {' '}
+                <Image
+                  src="https://via.placeholder.com/300x300"
+                  width={300}
+                  height={300}
+                  alt="Some Image"
+                  className="w-full h-full object-cover object-center"
+                ></Image>
+              </SwiperSlide>
+              <SwiperSlide>
+                {' '}
+                <Image
+                  src="https://via.placeholder.com/300x300"
+                  width={300}
+                  height={300}
+                  alt="Some Image"
+                  className="w-full h-full object-cover object-center"
+                ></Image>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </>
+      )}
       {!isDesktopOrLaptop && (
         <>
           <Swiper
@@ -52,7 +100,7 @@ const CarouselComponent: FunctionComponent<CarouselComponentProps> = ({
             autoplay={{
               delay: 2500,
             }}
-            className="mySwiper rounded-md h-[250px] w-[90%] mx-auto"
+            className="mySwiper rounded-md h-[250px] w-[90%] mx-auto mb-2"
           >
             <SwiperSlide>
               <Image
