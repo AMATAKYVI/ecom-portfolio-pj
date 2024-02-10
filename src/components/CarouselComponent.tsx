@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
+import Image from 'next/image';
 import { FunctionComponent, useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {
@@ -9,10 +9,9 @@ import {
   Autoplay,
   Keyboard,
   Navigation,
-  Pagination,
   Scrollbar,
 } from 'swiper/modules';
-import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 interface CarouselComponentProps {
   images: string[];
@@ -111,8 +110,30 @@ const CarouselComponent: FunctionComponent<CarouselComponentProps> = ({
                 className="w-full h-full object-cover object-center"
               ></Image>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>
+              <SwiperSlide>
+                {' '}
+                <Image
+                  src="https://via.placeholder.com/300x300"
+                  width={300}
+                  height={300}
+                  alt="Some Image"
+                  className="w-full h-full object-cover object-center"
+                ></Image>
+              </SwiperSlide>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SwiperSlide>
+                {' '}
+                <Image
+                  src="https://via.placeholder.com/300x300"
+                  width={300}
+                  height={300}
+                  alt="Some Image"
+                  className="w-full h-full object-cover object-center"
+                ></Image>
+              </SwiperSlide>
+            </SwiperSlide>
           </Swiper>
         </>
       )}

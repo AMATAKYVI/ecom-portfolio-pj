@@ -1,9 +1,9 @@
-import { FunctionComponent, useState, useEffect, ReactNode } from 'react';
-import { MenuOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { MenuOutlined } from '@ant-design/icons';
+import { FunctionComponent, useEffect, useState } from 'react';
 
-import { Dropdown, Button, MenuProps } from 'antd';
+import { Button, Dropdown, MenuProps } from 'antd';
+import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
-import { HelpCircle, ShoppingCart } from 'lucide-react';
 interface NavbarProps {}
 // type MenuPropsType = {
 //   key: string;
@@ -70,7 +70,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
               icon={<MenuOutlined className=" text-white" />}
             />
           </Dropdown>
-          <div className=" mx-4 px-2 my-auto rounded-full hover:bg-gray-100 transition-all duration-100 relative font-semibold">
+          <div className="hover:text-gray-300 mx-4 px-2 my-auto rounded-full cursor-pointer transition-all duration-100 relative font-semibold">
             <ShoppingCart className="w-5" />
             <div className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
               1
