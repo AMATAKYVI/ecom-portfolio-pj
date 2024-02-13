@@ -17,7 +17,7 @@ interface ProductType {
 }
 const CardComponent: FunctionComponent<CardProps> = ({ item }) => {
   return (
-    <Card hoverable className="max-w-sm" style={{ width: '100%' }}>
+    <Card hoverable className="max-w-xs mx-2 my-2" style={{ width: '100%' }}>
       {/* <img alt={item.name} src={item.images[0]} className="w-full" /> */}
       <div className="px-6 py-4">
         <Meta title={item.name} description={item.description} />

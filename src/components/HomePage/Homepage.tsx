@@ -3,6 +3,7 @@ import { FunctionComponent, useEffect, useState } from 'react';
 import Product from '../Product';
 import CarouselComponent from '../CarouselComponent';
 import HomeAdsLanding from '../HomeAdsLanding';
+import ProductSlidePerView from '../ProductSlidePerView';
 
 interface HomepageProps {}
 
@@ -23,8 +24,18 @@ const Homepage: FunctionComponent<HomepageProps> = () => {
           ]}
         />
       </div>
-      <HomeAdsLanding />
-      <Product />
+      <div>
+        <HomeAdsLanding />
+      </div>
+
+      <div className="">
+        {/* electronic */}
+        <ProductSlidePerView />
+      </div>
+      <div className="">
+        {/* not ideal to display like this */}
+        <Product />
+      </div>
     </div>
   );
 };
