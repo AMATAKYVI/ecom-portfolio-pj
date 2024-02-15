@@ -81,7 +81,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
       {!isMobile && (
         <div className="px-5 text-sm py-2  flex border-b mb-2 sticky top-0 z-10 bg-blue-700 shadow-sm text-white font-semibold  rounded-b-sm">
           <div className="w-full flex align-center justify-between mx-5">
-            <div className="flex items-center cursor-pointer hover:bg-gray-100 rounded-lg shadow-md">
+            <div className="flex items-center cursor-pointer hover:bg-gray-100 rounded-lg shadow-md transition duration-500">
               <Image
                 src="/taklogo.png"
                 width={30}
@@ -90,14 +90,17 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
               />
             </div>
             <div className="flex gap-10 items-center">
-              <div>
+              <div className="cursor-pointer">
                 <p>Shop</p>
               </div>
-              <div>
+              <div className="cursor-pointer">
                 <p>Contact</p>
               </div>
               <div className="flex items-center gap-2 ">
-                <p className="">About</p>
+                <div className="cursor-pointer">
+                  <p className="">About</p>{' '}
+                </div>
+
                 {/* <HelpCircle className="w-4 h-4" /> */}
               </div>
               <div className="relative">

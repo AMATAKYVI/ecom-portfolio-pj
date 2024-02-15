@@ -34,7 +34,7 @@ const Homepage: FunctionComponent<HomepageProps> = () => {
       </div>
       <div className="">
         {/* not ideal to display like this */}
-        <Product />
+        {/* <Product /> */}
       </div>
     </div>
   );
