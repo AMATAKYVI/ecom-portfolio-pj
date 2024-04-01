@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run clean && next dev",
+    "build": "npm run clean && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "npx rimraf .next"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.1.0",
