@@ -1,9 +1,14 @@
-import Homepage from '@/components/HomePage/Homepage';
-
 export default function Home() {
   return (
     <main>
-      <Homepage />
+      {/* Static */}
+      <>Header</>
+      {/* Static */}
+      <>Banner</>
+      {/* Most complex */}
+      <>Filterbar</>
+      {/* Most complex */}
+      <>Products</>
     </main>
   );
 }
