@@ -16,10 +16,7 @@ export default function Home() {
       {/* horizontal line */}
       <hr className="my-3 border-gray-200" />
       {/* Container Product Listing and Filtering */}
-      <div
-        className="flex gap-5 mx-5 h-[33vh]"
-        content="container-product-filter"
-      >
+      <div className="flex gap-5 h-[33vh]" content="container-product-filter">
         {/* Most complex */}
         {/* <>Filterbar</> */}
         <Filterbar />

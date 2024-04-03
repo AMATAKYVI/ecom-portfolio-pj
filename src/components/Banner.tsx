@@ -4,7 +4,7 @@ interface BannerProps {}
 
 const Banner: FC<BannerProps> = ({}) => {
   return (
-    <div className="flex bg-gray-100 p-6 h-[50vh] mx-5">
+    <div className="flex bg-gray-100 p-6 h-[50vh]">
       <div className="w-1/2">
         <img
           src="pc-product.jpg"
