@@ -28,9 +28,9 @@ export default function Home() {
       <div className="flex bg-gray-100 p-6 h-[50vh] mx-5">
         <div className="w-1/2">
           <img
-            src="product-image.jpg"
+            src="pc-product.jpg"
             alt="Product Image"
-            className="max-w-full"
+            className="object-contain w-full h-full"
           />
         </div>
         <div className="w-1/2 px-6">
@@ -49,11 +49,31 @@ export default function Home() {
       </div>
       {/* horizontal line */}
       <hr className="my-3 border-gray-200" />
-      {/*  */}
-      {/* Most complex */}
-      <>Filterbar</>
-      {/* Most complex */}
-      <>Products</>
+      {/* Container Product Listing and Filtering */}
+
+      <div className="flex" content="container-product-filter">
+        {/* Most complex */}
+        {/* <>Filterbar</> */}
+        <div className="w-[30%]">
+          <div className="">
+            <button className="">asc or desc </button>
+            <label htmlFor="" className="">
+              Price
+            </label>
+          </div>
+          <div className="">
+            <input type="checkbox" id="newArrival" name="checkbox" />
+            <label htmlFor="newArrival" className="">
+              New Arrival
+            </label>
+          </div>
+        </div>
+        {/* Most complex */}
+        {/* <>Products</> */}
+        <div className="w-[70%] bg-gray-200" content="product">
+          <div>Product list here</div>
+        </div>
+      </div>
     </main>
   );
 }
