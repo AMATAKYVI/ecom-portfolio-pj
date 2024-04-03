@@ -5,7 +5,7 @@ interface FilterbarProps {}
 
 const Filterbar: FC<FilterbarProps> = ({}) => {
   return (
-    <div className="w-[30%] bg-gray-100">
+    <div className="w-[30%]   bg-gray-100">
       <div className="">
         <button className="">
           <FaSortDown />
