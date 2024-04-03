@@ -4,7 +4,7 @@ interface CardProps {}
 
 const Card: FC<CardProps> = ({}) => {
   return (
-    <div className="  rounded-md bg-blue-700 m-1 flex flex-col justify-between">
+    <div className=" w-[250px] rounded-md bg-blue-700 m-1 flex flex-col justify-between">
       <div className="p-4">
         <img
           src="pc-product.jpg"
