@@ -6,14 +6,13 @@ interface NavbarProps {}
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
     <nav className="bg-gray-800 py-3 px-3 flex justify-between items-center">
-      <a href="https://www.example.com" className="inline-block px-4">
+      <a href="https://www.example.com" className=" px-4">
         <img src="logo.png" alt="Company Logo" />
       </a>
-      <div className="flex gap-5 items-center justify-center">
+      <div className="flex gap-1 items-center justify-center">
         <a href="contact.html" className="text-white px-4">
           About
         </a>
-
         <a href="contact.html" className="text-white px-4">
           Contact
         </a>
