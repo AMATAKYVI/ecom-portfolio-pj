@@ -1,26 +1,29 @@
 import { FC } from 'react';
 
-interface BannerProps {}
+interface BannerProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
 
-const Banner: FC<BannerProps> = ({}) => {
+const Banner: FC<BannerProps> = ({ title, description, imageUrl }) => {
   return (
-    <div className="flex bg-gray-100 p-6 h-[50vh]">
-      <div className="w-1/2">
+    <div className="flex flex-col md:flex-row items-center bg-gray-100 p-4 md:p-6">
+      <div className="md:w-1/2">
         <img
           src="pc-product.jpg"
           alt="Product Image"
           className="object-contain w-full h-full"
         />
       </div>
-      <div className="w-1/2 px-6">
-        <h2 className="text-2xl font-semibold mb-6">Product Name</h2>
-        <p className="text-gray-700 mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-          gravida risus, sed sodales leo.
+      <div className="md:w-1/2 px-4 md:px-6 mt-4 md:mt-0">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">title</h2>
+        <p className="text-gray-700 mb-4">
+          description
         </p>
         <a
           href="#"
-          className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600"
+          className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
         >
           Learn More
         </a>
