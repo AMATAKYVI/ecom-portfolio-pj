@@ -1,12 +1,10 @@
 import { FC } from 'react';
 
 interface BannerProps {
-  title: string;
-  description: string;
-  imageUrl: string;
+
 }
 
-const Banner: FC<BannerProps> = ({ title, description, imageUrl }) => {
+const Banner: FC<BannerProps> = ({ }) => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-100 p-4 md:p-6">
       <div className="md:w-1/2">
