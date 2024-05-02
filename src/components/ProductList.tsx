@@ -22,7 +22,7 @@ const products = [
 ];
 const ProductList: FC<ProductListProps> = ({}) => {
   return (
-    <div className="w-[70%] p-5 flex flex-wrap gap-10 bg-gray-200 overflow-y-auto">
+    <div className="w-[70%] p-5 flex flex-wrap gap-10 bg-gray-200 overflow-y-auto h-100">
       {products.map((item) => (
         <Card key={item.id} />
       ))}
