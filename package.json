@@ -2,6 +2,9 @@
   "name": "test-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "npm run clean && next dev",
     "build": "npm run clean && next build",
