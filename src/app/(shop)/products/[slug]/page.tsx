@@ -6,8 +6,17 @@ import { PriceDisplay } from "@/components/product/PriceDisplay";
 import { RatingStars } from "@/components/product/RatingStars";
 
 export default async function ProductDetailPage({ params }: { params: { slug: string } }) {
-  await connectToDb();
-  const product = await ProductModel.findOne({ slug: params.slug, isActive: true }).lean();
+  let product: any = null;
+
+  try {
+    await connectToDb();
+    product = await ProductModel.findOne({
+      slug: params.slug,
+      isActive: true,
+    }).lean();
+  } catch {
+    notFound();
+  }
 
   if (!product) {
     notFound();
